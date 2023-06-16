@@ -2,16 +2,24 @@ This is some MATLAB code that implements the basic concepts of neural networks w
 
 ---> 'hebbNN': 
         input: (x,y) = (input_data,desired_values)
-        output: [w1 w2 ... wn b] \n
+        output: [w1 w2 ... wn b] 
+
+        
 ---> 'perceptron':
         input: (x,y) = (input_data,desired_values)
-        output: [w1 w2 ... wn b] \n
+        output: [w1 w2 ... wn b] 
+
+        
 ---> 'evaluate_perceptron':
         input: (w,x,y) = ([w1 w2 ... wn b],input_data,desired_values)
-        output: mse \n
+        output: mse 
+
+        
 ---> 'sigmoid_neuron'
         input: (x,y) = (input_data,desired_values)
-        output: [w1 w2 ... wn b] \n
+        output: [w1 w2 ... wn b] 
+
+        
 ---> 'sigmoid_activation':
         input: x
         output: y = 1/(1+e^(-x))
