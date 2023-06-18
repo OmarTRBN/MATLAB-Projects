@@ -1,11 +1,11 @@
-% sigma_x = input("Enter the value for sigma_x: ");
-% sigma_y = input("Enter the value for sigma_y: ");
-% tao = input("Enter the value for tao: ");
+sigma_x = input("Enter the value for sigma_x: ");
+sigma_y = input("Enter the value for sigma_y: ");
+tao = input("Enter the value for tao: ");
 
-% Testing values
-sigma_x = -76;
-sigma_y = 34;
-tao = -65;
+% % Testing values
+% sigma_x = 67;
+% sigma_y = 12;
+% tao = -54;
 
 % Mohr circle parameters
 sigma_avg = (sigma_x + sigma_y)/2;
@@ -79,4 +79,13 @@ legend("Sigma Curve", "Tao Curve");
 xlabel('Angle in Degrees');
 ylabel('Values for sigma and tao');
 title("Sigma and Tao curves");
+
+% Calculate sigma' and tao' for desired orientation
+theta_d = input("Enter the value for the desired angle in degrees: ");
+sigma_x_d = sigma_avg + 0.5*(sigma_x - sigma_y)*cos(2*deg2rad(theta_d)) + tao*sin(2*deg2rad(theta_d))
+sigma_y_d = sigma_avg + 0.5*(sigma_x - sigma_y)*cos(2*deg2rad(theta_d+90)) + tao*sin(2*deg2rad(theta_d+90))
+tao_d = -0.5*(sigma_x - sigma_y)*sin(2*deg2rad(theta_d)) + tao*cos(2*deg2rad(theta_d))
+
+
+
 
